@@ -4,7 +4,7 @@
 
 ---
 
-STL is basically a set of tools available in C++ programming pattern that can make you code more **quickly**, **efficiently**, and in **generic way**
+STL is basically a set of tools available in C++ programming pattern that can make you code more **quickly**, **efficiently**, and in a **generic way**
 
 ---
 
@@ -21,7 +21,7 @@ int area(int a, int b){
 }
 ```
 
-The problem of that code is if I were to use the same function to calculate another rectangle with a different data types(e.g. `float`, `double`) the code would not work. So instead of making a different condition for different type of data, it would be faster and efficient to use templates. For example:
+The problem of that code is if I were to use the same function to calculate another rectangle with a different data types(e.g. `float`, `double`) the code would not work. So instead of making a different conditions for different types of data, it would be faster and efficient to use `template`. For example:
 
 ```C++
 template <typename T>
@@ -34,8 +34,8 @@ T area(T a, T b){
 With this code, we can anticipate the use of another data types in the future without the need to change the code. For example:
 
 ```C++
-int x = area<int>(5,10)                 //This would return x<int> = 50
-double y = area<double>(5.5,10.1)       //This would return y<double> = 55.55
+int     x = area<int>(5,10)                 //This would return x<int> = 50
+double  y = area<double>(5.5,10.1)          //This would return y<double> = 55.55
 ```
 
 > You can experiment with codes I wrote [here](https://github.com/alfikhlas/CPP-Learning/tree/main/Codes/STL_Template_Example.cpp)
